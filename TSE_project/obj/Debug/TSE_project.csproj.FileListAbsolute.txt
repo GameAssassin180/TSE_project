@@ -10,3 +10,16 @@ C:\Users\Mitch\source\repos\TSE_project\TSE_project\obj\Debug\TSE_project.csproj
 C:\Users\Mitch\source\repos\TSE_project\TSE_project\obj\Debug\TSE_project.csproj.CoreCompileInputs.cache
 C:\Users\Mitch\source\repos\TSE_project\TSE_project\obj\Debug\TSE_project.exe
 C:\Users\Mitch\source\repos\TSE_project\TSE_project\obj\Debug\TSE_project.pdb
+C:\Users\ashma\OneDrive\Documents\GitHub\TSE_project\TSE_project\bin\Debug\Database.mdf
+C:\Users\ashma\OneDrive\Documents\GitHub\TSE_project\TSE_project\bin\Debug\Database_log.ldf
+C:\Users\ashma\OneDrive\Documents\GitHub\TSE_project\TSE_project\bin\Debug\TSE_project.exe.config
+C:\Users\ashma\OneDrive\Documents\GitHub\TSE_project\TSE_project\bin\Debug\TSE_project.exe
+C:\Users\ashma\OneDrive\Documents\GitHub\TSE_project\TSE_project\bin\Debug\TSE_project.pdb
+C:\Users\ashma\OneDrive\Documents\GitHub\TSE_project\TSE_project\obj\Debug\TSE_project.csproj.AssemblyReference.cache
+C:\Users\ashma\OneDrive\Documents\GitHub\TSE_project\TSE_project\obj\Debug\TSE_project.csproj.SuggestedBindingRedirects.cache
+C:\Users\ashma\OneDrive\Documents\GitHub\TSE_project\TSE_project\obj\Debug\TSE_project.Form1.resources
+C:\Users\ashma\OneDrive\Documents\GitHub\TSE_project\TSE_project\obj\Debug\TSE_project.Properties.Resources.resources
+C:\Users\ashma\OneDrive\Documents\GitHub\TSE_project\TSE_project\obj\Debug\TSE_project.csproj.GenerateResource.cache
+C:\Users\ashma\OneDrive\Documents\GitHub\TSE_project\TSE_project\obj\Debug\TSE_project.csproj.CoreCompileInputs.cache
+C:\Users\ashma\OneDrive\Documents\GitHub\TSE_project\TSE_project\obj\Debug\TSE_project.exe
+C:\Users\ashma\OneDrive\Documents\GitHub\TSE_project\TSE_project\obj\Debug\TSE_project.pdb
