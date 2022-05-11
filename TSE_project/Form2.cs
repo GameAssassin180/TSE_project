@@ -19,15 +19,22 @@ namespace TSE_project
 
         private void createAccountButton2_Click(object sender, EventArgs e)
         {
+            string email = "";
             string username = "";
             string password = "";
 
+            emailBox.Text = email.ToString();
             usernameBox.Text = username.ToString();
             passwordBox.Text = password.ToString();
 
         }
 
         private void usernameBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void emailBox_TextChanged(object sender, EventArgs e)
         {
 
         }

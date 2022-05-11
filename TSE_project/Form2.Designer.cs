@@ -36,6 +36,9 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.createAccountLabel = new System.Windows.Forms.Label();
+            this.Email = new System.Windows.Forms.Label();
+            this.emailBox = new System.Windows.Forms.TextBox();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
             // createAccountButton2
@@ -53,7 +56,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(27, 199);
+            this.label3.Location = new System.Drawing.Point(27, 244);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(53, 13);
             this.label3.TabIndex = 17;
@@ -62,7 +65,7 @@
             // Username
             // 
             this.Username.AutoSize = true;
-            this.Username.Location = new System.Drawing.Point(27, 129);
+            this.Username.Location = new System.Drawing.Point(27, 174);
             this.Username.Name = "Username";
             this.Username.Size = new System.Drawing.Size(55, 13);
             this.Username.TabIndex = 16;
@@ -70,14 +73,14 @@
             // 
             // passwordBox
             // 
-            this.passwordBox.Location = new System.Drawing.Point(30, 215);
+            this.passwordBox.Location = new System.Drawing.Point(30, 260);
             this.passwordBox.Name = "passwordBox";
             this.passwordBox.Size = new System.Drawing.Size(245, 20);
             this.passwordBox.TabIndex = 15;
             // 
             // usernameBox
             // 
-            this.usernameBox.Location = new System.Drawing.Point(30, 145);
+            this.usernameBox.Location = new System.Drawing.Point(30, 190);
             this.usernameBox.Name = "usernameBox";
             this.usernameBox.Size = new System.Drawing.Size(245, 20);
             this.usernameBox.TabIndex = 14;
@@ -86,7 +89,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.panel2.Location = new System.Drawing.Point(30, 241);
+            this.panel2.Location = new System.Drawing.Point(30, 286);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(245, 1);
             this.panel2.TabIndex = 12;
@@ -94,7 +97,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.panel1.Location = new System.Drawing.Point(30, 171);
+            this.panel1.Location = new System.Drawing.Point(30, 216);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(245, 1);
             this.panel1.TabIndex = 11;
@@ -108,11 +111,39 @@
             this.createAccountLabel.TabIndex = 10;
             this.createAccountLabel.Text = "CREATE ACCOUNT";
             // 
+            // Email
+            // 
+            this.Email.AutoSize = true;
+            this.Email.Location = new System.Drawing.Point(27, 108);
+            this.Email.Name = "Email";
+            this.Email.Size = new System.Drawing.Size(32, 13);
+            this.Email.TabIndex = 21;
+            this.Email.Text = "Email";
+            // 
+            // emailBox
+            // 
+            this.emailBox.Location = new System.Drawing.Point(30, 124);
+            this.emailBox.Name = "emailBox";
+            this.emailBox.Size = new System.Drawing.Size(245, 20);
+            this.emailBox.TabIndex = 20;
+            this.emailBox.TextChanged += new System.EventHandler(this.emailBox_TextChanged);
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.panel3.Location = new System.Drawing.Point(30, 150);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(245, 1);
+            this.panel3.TabIndex = 19;
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(302, 465);
+            this.Controls.Add(this.Email);
+            this.Controls.Add(this.emailBox);
+            this.Controls.Add(this.panel3);
             this.Controls.Add(this.createAccountButton2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.Username);
@@ -138,5 +169,8 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label createAccountLabel;
+        private System.Windows.Forms.Label Email;
+        private System.Windows.Forms.TextBox emailBox;
+        private System.Windows.Forms.Panel panel3;
     }
 }
