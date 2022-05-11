@@ -19,9 +19,11 @@ namespace TSE_project
 
         private void createAccountButton2_Click(object sender, EventArgs e)
         {
+            string email = "";
             string username = "";
             string password = "";
 
+            emailBox.Text = email.ToString();
             usernameBox.Text = username.ToString();
             passwordBox.Text = password.ToString();
 
@@ -31,5 +33,11 @@ namespace TSE_project
         {
 
         }
+
+        private void Form2_Load(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }
