@@ -36,6 +36,9 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.createAccountLabel = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
             // createAccountButton2
@@ -62,7 +65,7 @@
             // Username
             // 
             this.Username.AutoSize = true;
-            this.Username.Location = new System.Drawing.Point(27, 129);
+            this.Username.Location = new System.Drawing.Point(27, 97);
             this.Username.Name = "Username";
             this.Username.Size = new System.Drawing.Size(55, 13);
             this.Username.TabIndex = 16;
@@ -77,7 +80,7 @@
             // 
             // usernameBox
             // 
-            this.usernameBox.Location = new System.Drawing.Point(30, 145);
+            this.usernameBox.Location = new System.Drawing.Point(30, 113);
             this.usernameBox.Name = "usernameBox";
             this.usernameBox.Size = new System.Drawing.Size(245, 20);
             this.usernameBox.TabIndex = 14;
@@ -94,7 +97,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.panel1.Location = new System.Drawing.Point(30, 171);
+            this.panel1.Location = new System.Drawing.Point(30, 139);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(245, 1);
             this.panel1.TabIndex = 11;
@@ -102,17 +105,44 @@
             // createAccountLabel
             // 
             this.createAccountLabel.AutoSize = true;
-            this.createAccountLabel.Location = new System.Drawing.Point(99, 80);
+            this.createAccountLabel.Location = new System.Drawing.Point(98, 45);
             this.createAccountLabel.Name = "createAccountLabel";
             this.createAccountLabel.Size = new System.Drawing.Size(105, 13);
             this.createAccountLabel.TabIndex = 10;
             this.createAccountLabel.Text = "CREATE ACCOUNT";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(27, 147);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(32, 13);
+            this.label1.TabIndex = 21;
+            this.label1.Text = "Email";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(30, 163);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(245, 20);
+            this.textBox1.TabIndex = 20;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.panel3.Location = new System.Drawing.Point(30, 189);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(245, 1);
+            this.panel3.TabIndex = 19;
             // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(302, 465);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.panel3);
             this.Controls.Add(this.createAccountButton2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.Username);
@@ -123,6 +153,7 @@
             this.Controls.Add(this.createAccountLabel);
             this.Name = "Form2";
             this.Text = "Form2";
+            this.Load += new System.EventHandler(this.Form2_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -138,5 +169,8 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label createAccountLabel;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Panel panel3;
     }
 }
