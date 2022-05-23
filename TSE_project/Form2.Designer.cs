@@ -37,7 +37,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.createAccountLabel = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.emailBox = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
@@ -120,12 +120,12 @@
             this.label1.TabIndex = 21;
             this.label1.Text = "Email";
             // 
-            // textBox1
+            // emailBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(30, 163);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(245, 20);
-            this.textBox1.TabIndex = 20;
+            this.emailBox.Location = new System.Drawing.Point(30, 163);
+            this.emailBox.Name = "emailBox";
+            this.emailBox.Size = new System.Drawing.Size(245, 20);
+            this.emailBox.TabIndex = 20;
             // 
             // panel3
             // 
@@ -141,7 +141,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(302, 465);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.emailBox);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.createAccountButton2);
             this.Controls.Add(this.label3);
@@ -170,7 +170,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label createAccountLabel;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox emailBox;
         private System.Windows.Forms.Panel panel3;
     }
 }
