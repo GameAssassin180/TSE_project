@@ -13,7 +13,7 @@ namespace TSE_project
         public Form1()
         {
             InitializeComponent();
-            connectionString = "Data Source = LocalHost\\SQLEXPRESS; Integrated Security = True";
+            connectionString = ConfigurationManager.ConnectionStrings["TSE_project.Properties.Settings.DatabaseConnectionString"].ConnectionString;
         }
 
         private void button1_Click_1(object sender, EventArgs e)
@@ -21,13 +21,14 @@ namespace TSE_project
             connection = new SqlConnection(connectionString); // making connection   
             SqlDataAdapter sda = new SqlDataAdapter("SELECT COUNT(*) FROM Login WHERE username='" + usernameBox.Text + "' AND password='" + passwordBox.Text + "'", connection);
             /* in above line the program is selecting the whole data from table and the matching it with the user name and password provided by user. */
-            DataTable dt = new DataTable(); //this is creating a virtual table  
-            sda.Fill(dt);
-            if (dt.Rows[0][0].ToString() == "1")
+            DataTable login = new DataTable(); //this is creating a virtual table  
+            sda.Fill(login);
+            if (login.Rows[0][0].ToString() == "1")
             {
                 /* I have made a new page called home page. If the user is successfully authenticated then the form will be moved to the next form */
                 this.Hide();
-                new Form2().Show(); // opens home screen
+                connection.Close(); //  closes the connections
+                new home().Show(); // opens home screen
             }
             else
             {

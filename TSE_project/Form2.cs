@@ -13,16 +13,20 @@ namespace TSE_project
         public Form2()
         {
             InitializeComponent();
-            connectionString = "Data Source = LocalHost\\SQLEXPRESS; Integrated Security = True";
+            connectionString = ConfigurationManager.ConnectionStrings["TSE_project.Properties.Settings.DatabaseConnectionString"].ConnectionString;
+        }
+        private void Form2_Load(object sender, EventArgs e)
+        {
+            
         }
 
-        private void createAccountButton2_Click(object sender, EventArgs e)
+        private void CreateAccount_Click(object sender, EventArgs e)
         {
-            string email = Convert.ToString(emailBox.Text);
-            string username = Convert.ToString(usernameBox.Text);
-            string password = Convert.ToString(passwordBox.Text);
+            string email = Convert.ToString(Email.Text);
+            string username = Convert.ToString(Username.Text);
+            string password = Convert.ToString(Password.Text);
+            connection = new SqlConnection(connectionString); // making connection   
             string Query = ("INSERT INTO Login (Email,Username,Password) VALUES ('" + email + "','" + username + "','" + password + "')"); // creates SQL querey
-            connection = new SqlConnection(connectionString); // makes connection
             SqlCommand command = new SqlCommand(Query, connection); // creates a query on the database
             connection.Open(); //opens a connection
             command.ExecuteNonQuery(); // runs teh query
@@ -31,28 +35,5 @@ namespace TSE_project
             this.Hide(); // closes the window
             new Form1().Show(); // opens the login window
         }
-
-        private void setButtonVisibility()
-        {
-            if ((usernameBox.Text != String.Empty) && (emailBox.Text != String.Empty) && (passwordBox.Text != String.Empty)) // checks if all the text boxes have text in them.
-            {
-                createAccountButton2.Enabled = true; // enables the save button
-            }
-            else
-            {
-                createAccountButton2.Enabled = false;// disables the save button 
-            }
-        }
-
-        private void Form2_Load(object sender, EventArgs e)
-        {
-            createAccountButton2.Enabled = false;
-        }
-
-        private void usernameBox_TextChanged(object sender, EventArgs e)
-        {
-            setButtonVisibility();
-        }
-
     }
 }

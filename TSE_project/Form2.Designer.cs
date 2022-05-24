@@ -28,131 +28,126 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.createAccountButton2 = new System.Windows.Forms.Button();
+            this.Username = new System.Windows.Forms.TextBox();
+            this.Password = new System.Windows.Forms.TextBox();
+            this.Email = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.Username = new System.Windows.Forms.Label();
-            this.passwordBox = new System.Windows.Forms.TextBox();
-            this.usernameBox = new System.Windows.Forms.TextBox();
+            this.CreateAccount = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.createAccountLabel = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.emailBox = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
-            // createAccountButton2
-            // 
-            this.createAccountButton2.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.createAccountButton2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.createAccountButton2.Location = new System.Drawing.Point(30, 309);
-            this.createAccountButton2.Name = "createAccountButton2";
-            this.createAccountButton2.Size = new System.Drawing.Size(245, 37);
-            this.createAccountButton2.TabIndex = 18;
-            this.createAccountButton2.Text = "CREATE ACCOUNT";
-            this.createAccountButton2.UseVisualStyleBackColor = false;
-            this.createAccountButton2.Click += new System.EventHandler(this.createAccountButton2_Click);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(27, 199);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(53, 13);
-            this.label3.TabIndex = 17;
-            this.label3.Text = "Password";
-            // 
             // Username
             // 
-            this.Username.AutoSize = true;
-            this.Username.Location = new System.Drawing.Point(27, 97);
+            this.Username.Location = new System.Drawing.Point(12, 31);
             this.Username.Name = "Username";
-            this.Username.Size = new System.Drawing.Size(55, 13);
-            this.Username.TabIndex = 16;
-            this.Username.Text = "Username";
+            this.Username.Size = new System.Drawing.Size(245, 20);
+            this.Username.TabIndex = 0;
             // 
-            // passwordBox
+            // Password
             // 
-            this.passwordBox.Location = new System.Drawing.Point(30, 215);
-            this.passwordBox.Name = "passwordBox";
-            this.passwordBox.Size = new System.Drawing.Size(245, 20);
-            this.passwordBox.TabIndex = 15;
+            this.Password.Location = new System.Drawing.Point(12, 129);
+            this.Password.Name = "Password";
+            this.Password.Size = new System.Drawing.Size(245, 20);
+            this.Password.TabIndex = 1;
             // 
-            // usernameBox
+            // Email
             // 
-            this.usernameBox.Location = new System.Drawing.Point(30, 113);
-            this.usernameBox.Name = "usernameBox";
-            this.usernameBox.Size = new System.Drawing.Size(245, 20);
-            this.usernameBox.TabIndex = 14;
-            this.usernameBox.TextChanged += new System.EventHandler(this.usernameBox_TextChanged);
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.panel2.Location = new System.Drawing.Point(30, 241);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(245, 1);
-            this.panel2.TabIndex = 12;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.panel1.Location = new System.Drawing.Point(30, 139);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(245, 1);
-            this.panel1.TabIndex = 11;
-            // 
-            // createAccountLabel
-            // 
-            this.createAccountLabel.AutoSize = true;
-            this.createAccountLabel.Location = new System.Drawing.Point(98, 45);
-            this.createAccountLabel.Name = "createAccountLabel";
-            this.createAccountLabel.Size = new System.Drawing.Size(105, 13);
-            this.createAccountLabel.TabIndex = 10;
-            this.createAccountLabel.Text = "CREATE ACCOUNT";
+            this.Email.Location = new System.Drawing.Point(12, 80);
+            this.Email.Name = "Email";
+            this.Email.Size = new System.Drawing.Size(245, 20);
+            this.Email.TabIndex = 2;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(27, 147);
+            this.label1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(32, 13);
-            this.label1.TabIndex = 21;
-            this.label1.Text = "Email";
+            this.label1.Size = new System.Drawing.Size(81, 19);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Username:";
             // 
-            // emailBox
+            // label2
             // 
-            this.emailBox.Location = new System.Drawing.Point(30, 163);
-            this.emailBox.Name = "emailBox";
-            this.emailBox.Size = new System.Drawing.Size(245, 20);
-            this.emailBox.TabIndex = 20;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(12, 61);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(50, 19);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Email:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(12, 110);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(78, 19);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "Password:";
+            // 
+            // CreateAccount
+            // 
+            this.CreateAccount.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.CreateAccount.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.CreateAccount.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CreateAccount.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.CreateAccount.Location = new System.Drawing.Point(12, 172);
+            this.CreateAccount.Name = "CreateAccount";
+            this.CreateAccount.Size = new System.Drawing.Size(245, 60);
+            this.CreateAccount.TabIndex = 6;
+            this.CreateAccount.Text = "Create Account";
+            this.CreateAccount.UseVisualStyleBackColor = false;
+            this.CreateAccount.Click += new System.EventHandler(this.CreateAccount_Click);
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.panel2.Location = new System.Drawing.Point(12, 57);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(245, 1);
+            this.panel2.TabIndex = 7;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.panel1.Location = new System.Drawing.Point(12, 106);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(245, 1);
+            this.panel1.TabIndex = 8;
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.panel3.Location = new System.Drawing.Point(30, 189);
+            this.panel3.Location = new System.Drawing.Point(12, 155);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(245, 1);
-            this.panel3.TabIndex = 19;
+            this.panel3.TabIndex = 9;
             // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(302, 465);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.emailBox);
+            this.ClientSize = new System.Drawing.Size(270, 354);
             this.Controls.Add(this.panel3);
-            this.Controls.Add(this.createAccountButton2);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.Username);
-            this.Controls.Add(this.passwordBox);
-            this.Controls.Add(this.usernameBox);
-            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.createAccountLabel);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.CreateAccount);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.Email);
+            this.Controls.Add(this.Password);
+            this.Controls.Add(this.Username);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Form2";
-            this.Text = "Form2";
+            this.Text = "Create Account";
             this.Load += new System.EventHandler(this.Form2_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -161,16 +156,15 @@
 
         #endregion
 
-        private System.Windows.Forms.Button createAccountButton2;
+        private System.Windows.Forms.TextBox Username;
+        private System.Windows.Forms.TextBox Password;
+        private System.Windows.Forms.TextBox Email;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label Username;
-        private System.Windows.Forms.TextBox passwordBox;
-        private System.Windows.Forms.TextBox usernameBox;
+        private System.Windows.Forms.Button CreateAccount;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label createAccountLabel;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox emailBox;
         private System.Windows.Forms.Panel panel3;
     }
 }
