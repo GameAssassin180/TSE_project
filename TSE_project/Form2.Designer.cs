@@ -144,6 +144,7 @@
             this.Controls.Add(this.Email);
             this.Controls.Add(this.Password);
             this.Controls.Add(this.Username);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Form2";
