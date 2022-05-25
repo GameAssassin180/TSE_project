@@ -9,6 +9,7 @@ namespace TSE_project
     public partial class Form1 : Form
     {
         SqlConnection connection;
+        public static string userSelect; // saves what email has been used to log in with. 
         string connectionString;
         public Form1()
         {
@@ -28,6 +29,7 @@ namespace TSE_project
                 /* I have made a new page called home page. If the user is successfully authenticated then the form will be moved to the next form */
                 this.Hide();
                 connection.Close(); //  closes the connections
+                userSelect = usernameBox.Text;
                 new home().Show(); // opens home screen
             }
             else

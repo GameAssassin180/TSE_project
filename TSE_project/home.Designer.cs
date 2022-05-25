@@ -53,6 +53,7 @@
             this.Refresh.TabIndex = 0;
             this.Refresh.Text = "Refresh";
             this.Refresh.UseVisualStyleBackColor = true;
+            this.Refresh.Click += new System.EventHandler(this.Refresh_Click);
             // 
             // EntryButton
             // 
@@ -62,6 +63,7 @@
             this.EntryButton.TabIndex = 1;
             this.EntryButton.Text = "Add Entry";
             this.EntryButton.UseVisualStyleBackColor = true;
+            this.EntryButton.Click += new System.EventHandler(this.EntryButton_Click);
             // 
             // LogOut
             // 
@@ -71,6 +73,7 @@
             this.LogOut.TabIndex = 2;
             this.LogOut.Text = "Log Out";
             this.LogOut.UseVisualStyleBackColor = true;
+            this.LogOut.Click += new System.EventHandler(this.LogOut_Click);
             // 
             // EntryBox
             // 
@@ -79,6 +82,7 @@
             this.EntryBox.Name = "EntryBox";
             this.EntryBox.Size = new System.Drawing.Size(120, 303);
             this.EntryBox.TabIndex = 3;
+            this.EntryBox.SelectedIndexChanged += new System.EventHandler(this.EntryBox_SelectedIndexChanged);
             // 
             // dateTimePicker1
             // 
@@ -87,6 +91,7 @@
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
             this.dateTimePicker1.TabIndex = 5;
             this.dateTimePicker1.Value = new System.DateTime(2022, 5, 1, 0, 0, 0, 0);
+            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // DiaryBox
             // 
@@ -206,6 +211,7 @@
             this.MinimizeBox = false;
             this.Name = "home";
             this.Text = "Home";
+            this.Load += new System.EventHandler(this.home_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
