@@ -25,3 +25,4 @@ C:\Users\Mitch\source\repos\TSE_project\TSE_project\obj\Debug\TSE_project.Form2.
 C:\Users\Mitch\Source\Repos\TSE_project\TSE_project\bin\Debug\MentalDatabase.mdf
 C:\Users\Mitch\Source\Repos\TSE_project\TSE_project\bin\Debug\MentalDatabase_log.ldf
 C:\Users\Mitch\Source\Repos\TSE_project\TSE_project\obj\Debug\TSE_project.home.resources
+C:\Users\Mitch\Source\Repos\TSE_project\TSE_project\obj\Debug\TSE_project.entry.resources

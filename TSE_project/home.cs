@@ -19,34 +19,30 @@ namespace TSE_project
         private void EntryLoad()// declares a public void called Entryload.
         {
             string username = Form1.userSelect;
-            DateTime date = dateTimePicker1.Value.Date;
-            string Query = ("SELECT * FROM Entry WHERE Username = @username AND Date = @date");
+            string Query = ("SELECT * FROM Entry WHERE Username = @username ORDER BY DateTime");
             using (connection = new SqlConnection(connectionString))
             using (SqlCommand command = new SqlCommand(Query, connection))
             using (SqlDataAdapter adapter = new SqlDataAdapter(command))
             { 
                 command.Parameters.AddWithValue("@username", username);
-                command.Parameters.AddWithValue("@date", date);
                 DataTable Entry = new DataTable(); // declares a new datatable called entry 
                 adapter.Fill(Entry); // fills the new data table with the infromation grabed from the ran query
 
-                EntryBox.DisplayMember = "Time";// sets the listbox querybox to dispaly the time column from the data table.  
-                EntryBox.ValueMember = "Time";// sets the listbox querybox to have the value of the time column from the data table.
+                EntryBox.DisplayMember = "DateTime";// sets the listbox querybox to dispaly the time column from the data table.  
+                EntryBox.ValueMember = "DateTime";// sets the listbox querybox to have the value of the time column from the data table.
                 EntryBox.DataSource = Entry;// sets the listbox querybox datasourse to the data table entry declared earlier.
             }
         }
         private void DiaryLoad()// declares a public void called Entryload.
         {
             string username = Form1.userSelect;
-            DateTime date = dateTimePicker1.Value.Date;
-            string Query = ("SELECT * FROM Entry WHERE Username = @username AND Date = @date AND Time = @time");
+            string Query = ("SELECT * FROM Entry WHERE Username = @username AND DateTime = @date");
             using (connection = new SqlConnection(connectionString))
             using (SqlCommand command = new SqlCommand(Query, connection))
             using (SqlDataAdapter adapter = new SqlDataAdapter(command))
             {
                 command.Parameters.AddWithValue("@username", username);
-                command.Parameters.AddWithValue("@date", date);
-                command.Parameters.AddWithValue("@time", EntryBox.SelectedValue);
+                command.Parameters.AddWithValue("@date", EntryBox.SelectedValue);
                 DataTable diary = new DataTable(); // declares a new datatable called diary 
                 adapter.Fill(diary); // fills the new data table with the infromation grabed from the ran query
 
@@ -58,15 +54,13 @@ namespace TSE_project
         private void LocationLoad()// declares a public void called Locationload.
         {
             string username = Form1.userSelect;
-            DateTime date = dateTimePicker1.Value.Date;
-            string Query = ("SELECT Entry.LocationId, Location.LocationName FROM Entry INNER JOIN Location ON Entry.LocationId = Location.LocationId WHERE Username = @username AND Date = @date AND Time = @time");
+            string Query = ("SELECT Entry.LocationId, Location.LocationName FROM Entry INNER JOIN Location ON Entry.LocationId = Location.LocationId WHERE Username = @username AND DateTime = @date");
             using (connection = new SqlConnection(connectionString))
             using (SqlCommand command = new SqlCommand(Query, connection))
             using (SqlDataAdapter adapter = new SqlDataAdapter(command))
             {
                 command.Parameters.AddWithValue("@username", username);
-                command.Parameters.AddWithValue("@date", date);
-                command.Parameters.AddWithValue("@time", EntryBox.SelectedValue);
+                command.Parameters.AddWithValue("@date", EntryBox.SelectedValue);
                 DataTable location = new DataTable(); // declares a new datatable called Location 
                 adapter.Fill(location); // fills the new data table with the infromation grabed from the ran query
 
@@ -78,15 +72,13 @@ namespace TSE_project
         private void ActivityLoad()// declares a public void called ActivityLoad.
         {
             string username = Form1.userSelect;
-            DateTime date = dateTimePicker1.Value.Date;
-            string Query = ("SELECT Entry.LocationId, Activity.ActivityName FROM Entry INNER JOIN Activity ON Entry.ActivityId = Activity.ActivityId WHERE Username = @username AND Date = @date AND Time = @time");
+            string Query = ("SELECT Entry.LocationId, Activity.ActivityName FROM Entry INNER JOIN Activity ON Entry.ActivityId = Activity.ActivityId WHERE Username = @username AND DateTime = @date");
             using (connection = new SqlConnection(connectionString))
             using (SqlCommand command = new SqlCommand(Query, connection))
             using (SqlDataAdapter adapter = new SqlDataAdapter(command))
             {
                 command.Parameters.AddWithValue("@username", username);
-                command.Parameters.AddWithValue("@date", date);
-                command.Parameters.AddWithValue("@time", EntryBox.SelectedValue);
+                command.Parameters.AddWithValue("@date", EntryBox.SelectedValue);
                 DataTable activity = new DataTable(); // declares a new datatable called activity 
                 adapter.Fill(activity); // fills the new data table with the infromation grabed from the ran query
 
@@ -98,15 +90,13 @@ namespace TSE_project
         private void MoodLoad()// declares a public void called Moodload.
         {
             string username = Form1.userSelect;
-            DateTime date = dateTimePicker1.Value.Date;
-            string Query = ("SELECT Entry.Mood, Mood.MoodName FROM Entry INNER JOIN Mood ON Entry.Mood = Mood.MoodId WHERE Username = @username AND Date = @date AND Time = @time");
+            string Query = ("SELECT Entry.Mood, Mood.MoodName FROM Entry INNER JOIN Mood ON Entry.Mood = Mood.MoodId WHERE Username = @username AND DateTime = @date");
             using (connection = new SqlConnection(connectionString))
             using (SqlCommand command = new SqlCommand(Query, connection))
             using (SqlDataAdapter adapter = new SqlDataAdapter(command))
             {
                 command.Parameters.AddWithValue("@username", username);
-                command.Parameters.AddWithValue("@date", date);
-                command.Parameters.AddWithValue("@time", EntryBox.SelectedValue);
+                command.Parameters.AddWithValue("@date", EntryBox.SelectedValue);
                 DataTable Mood = new DataTable(); // declares a new datatable called activity 
                 adapter.Fill(Mood); // fills the new data table with the infromation grabed from the ran query
 
@@ -119,7 +109,6 @@ namespace TSE_project
 
         private void home_Load(object sender, EventArgs e)
         {
-            dateTimePicker1.Text = Convert.ToString(DateTime.Now);
             EntryLoad();
         }
 
@@ -144,6 +133,7 @@ namespace TSE_project
         private void LogOut_Click(object sender, EventArgs e)
         {
             this.Close();
+            new Form1().Show();
         }
 
         private void EntryButton_Click(object sender, EventArgs e)
